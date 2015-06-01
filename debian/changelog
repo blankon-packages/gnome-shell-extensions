@@ -1,0 +1,349 @@
+gnome-shell-extensions (3.16.1-0blankon1) tambora; urgency=medium
+
+  * New upstream release
+  * Import from PPA GNOME3-TEAM
+
+ -- Mahyuddin <yudi.al@gmail.com>  Mon, 01 Jun 2015 17:13:53 +0700
+
+gnome-shell-extensions (3.16.1-0ubuntu1~vivid1) vivid; urgency=medium
+
+  * New upstream release
+
+ -- Tim Lunn <tim@feathertop.org>  Sat, 18 Apr 2015 12:54:53 +1000
+
+gnome-shell-extensions (3.16.0-0ubuntu1~vivid1) vivid; urgency=medium
+
+  * New upstream release
+
+ -- Tim Lunn <tim@feathertop.org>  Wed, 25 Mar 2015 17:46:33 +1100
+
+gnome-shell-extensions (3.15.92-0ubuntu1~vivid1) vivid; urgency=medium
+
+  * New upstream release
+
+ -- Tim Lunn <tim@feathertop.org>  Thu, 19 Mar 2015 09:23:00 +1100
+
+gnome-shell-extensions (3.15.91-0ubuntu1~vivid1) vivid; urgency=medium
+
+  * New upstream release
+  * debian/rules: remove systemmonitor extension its gone
+  * debian/control.in: drop libgtop deps 
+
+ -- Tim Lunn <tim@feathertop.org>  Fri, 06 Mar 2015 10:40:26 +1100
+
+gnome-shell-extensions (3.15.4-0ubuntu1~vivid1) vivid; urgency=medium
+
+  * New upstream release
+  * debian/patches/dont-require-nautilus-classic.patch: refreshed
+
+ -- Tim Lunn <tim@feathertop.org>  Sun, 25 Jan 2015 11:05:37 +1100
+
+gnome-shell-extensions (3.14.3-0ubuntu1) vivid; urgency=medium
+
+  * New upstream release (LP: #1399047)
+
+ -- Tim Lunn <tim@feathertop.org>  Thu, 25 Dec 2014 08:11:50 +1100
+
+gnome-shell-extensions (3.14.1-1ubuntu1) vivid; urgency=low
+
+  * Merge from Debian unstable.  Remaining changes:
+    - debian/patches/fix-ubuntu-sessions.patch:
+      + Set X-LightDM-DesktopName to GNOME for GNOME session.
+    - debian/gnome-shell-extensions.gsettings-override:
+      + Removed, no longer useful.
+
+ -- Artur Rona <ari-tczew@ubuntu.com>  Wed, 29 Oct 2014 00:21:20 +0100
+
+gnome-shell-extensions (3.14.1-1) unstable; urgency=medium
+
+  * New upstream release.
+  * debian/control.in: Bump Standards-Version to 3.9.6 (no further changes)
+  * Add missing dependencies against gir packages, including gir1.2-gmenu-3.0,
+    this should fix the apps-menu extension for some people (Closes: #765460).
+
+ -- Laurent Bigonville <bigon@debian.org>  Sun, 19 Oct 2014 21:17:58 +0200
+
+gnome-shell-extensions (3.14.0-2) unstable; urgency=medium
+
+  * Drop xrandr from EXTENSIONS_DISABLED, this extension was removed
+    upstream.
+  * Add new screenshot-window-sizer extension to EXTENSIONS_ENABLED.
+
+ -- Michael Biebl <biebl@debian.org>  Wed, 24 Sep 2014 01:15:32 +0200
+
+gnome-shell-extensions (3.14.0-1) unstable; urgency=medium
+
+  * debian/watch: only scan for stable releases.
+  * New upstream release.
+  * Upload to unstable.
+
+ -- Andreas Henriksson <andreas@fatal.se>  Tue, 23 Sep 2014 15:46:30 +0200
+
+gnome-shell-extensions (3.13.91-1) experimental; urgency=medium
+
+  * New upstream development release.
+
+ -- Andreas Henriksson <andreas@fatal.se>  Sat, 06 Sep 2014 11:16:39 -0700
+
+gnome-shell-extensions (3.12.2-1ubuntu1) utopic; urgency=low
+
+  * Merge from Debian unstable.  Remaining changes:
+    - debian/patches/fix-ubuntu-sessions.patch:
+      + Set X-LightDM-DesktopName to GNOME for GNOME session.
+    - debian/gnome-shell-extensions.gsettings-override:
+      + Removed, no longer useful.
+    - debian/watch:
+      + Watch for stable versions.
+
+ -- Artur Rona <ari-tczew@ubuntu.com>  Sat, 23 Aug 2014 01:22:46 +0200
+
+gnome-shell-extensions (3.12.2-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Bump Standards-Version to 3.9.5
+  * Upload to unstable.
+
+ -- Andreas Henriksson <andreas@fatal.se>  Tue, 15 Jul 2014 00:06:09 +0200
+
+gnome-shell-extensions (3.12.2-0ubuntu1) utopic; urgency=medium
+
+  * New upstream release.
+  * Merge from Debian unstable. Remaining changes:
+    - debian/patches/fix-ubuntu-sessions.patch:
+      + Set X-LightDM-DesktopName to GNOME for GNOME session.
+    - debian/gnome-shell-extensions.gsettings-override: removed, no longer useful
+    - debian/watch: watch for stable versions
+  * Droped changes:
+    - debian/patches/git-remove-e4x.patch. Fixed upstream
+    - debian/rules: remove alternative-status-menu and xrandr extensions
+      Fixed in debian
+
+ -- Jackson Doak <noskcaj@ubuntu.com>  Mon, 09 Jun 2014 08:31:24 +1000
+
+gnome-shell-extensions (3.12.0-1) experimental; urgency=low
+
+  [ Jean Schurger ]
+  * New upstream release (3.10.1)
+  * debian/rules: remove one of the 'windowsNavigator' extension listed twice
+    and the 'alternative-system-menu' extension (does not exists anymore)
+  * debian/copyright: Update 'Format:' line
+
+  [ Andreas Henriksson ]
+  * New upstream release (3.12.0)
+  * debian/local/gnome-session-classic,
+    debian/patches/gnome-session-classic-wrapper-script.patch:
+    - update script to include new GNOME_SHELL_SESSION_MODE env variable
+      and update patch to apply again.
+
+ -- Andreas Henriksson <andreas@fatal.se>  Fri, 04 Apr 2014 21:43:18 +0200
+
+gnome-shell-extensions (3.10.1-0ubuntu2) trusty; urgency=medium
+
+  * debian/patches/git-remove-e4x.patch: Remove e4x from places
+    menu as required for js24 (LP: #1291000)
+
+ -- Tim Lunn <tim@feathertop.org>  Thu, 13 Mar 2014 08:01:26 +1100
+
+gnome-shell-extensions (3.10.1-0ubuntu1) trusty; urgency=medium
+
+  * New upstream release (LP: #1269916)
+  * debian/rules: remove alternative-status-menu and xrandr extensions,
+    these have been removed upstream
+  * debian/gnome-shell-extensions.gsettings-override: removed, no longer useful
+  * debian/watch: watch for stable versions
+
+ -- Tim Lunn <tim@feathertop.org>  Sun, 29 Dec 2013 14:42:51 +1100
+
+gnome-shell-extensions (3.8.4-2ubuntu1) trusty; urgency=low
+
+  * Merge from Debian unstable. (LP: #1259871) Remaining changes:
+    - debian/patches/fix-ubuntu-sessions.patch:
+      + Set X-LightDM-DesktopName to GNOME for GNOME session.
+
+ -- Artur Rona <ari-tczew@tlen.pl>  Wed, 11 Dec 2013 10:21:23 +0100
+
+gnome-shell-extensions (3.8.4-2) unstable; urgency=low
+
+  * Upload to unstable.
+
+ -- Emilio Pozuelo Monfort <pochu@debian.org>  Sun, 13 Oct 2013 18:11:33 +0200
+
+gnome-shell-extensions (3.8.4-1) experimental; urgency=low
+
+  [ Jeremy Bicha ]
+  * New upstream release
+  * Dropped patches applied in new version:
+    - fix-hibernate.patch
+    - fix-applications-menu-resolution-change.patch
+    - look-in-data-home-for-themes.patch
+
+  [ Michael Biebl ]
+  * Add a wrapper script to start the GNOME Classic session as currently
+    Xsession doesn't allow to run gnome-session with custom arguments due to
+    #653327.
+
+ -- Michael Biebl <biebl@debian.org>  Fri, 11 Oct 2013 18:55:23 +0200
+
+gnome-shell-extensions (3.8.4-0ubuntu1) saucy; urgency=low
+
+  * New upstream bugfix release.
+    - systemMonitor blocks the message tray menu properly
+    - translation updates
+  * Dropped patches applied in new version:
+    - fix-hibernate.patch
+    - fix-applications-menu-resolution-change.patch
+    - look-in-data-home-for-themes.patch
+
+ -- Jeremy Bicha <jbicha@ubuntu.com>  Wed, 11 Sep 2013 16:40:53 -0400
+
+gnome-shell-extensions (3.8.3.1-1ubuntu1) saucy; urgency=low
+
+  * debian/patches/fix-ubuntu-sessions.patch
+    - Set X-LightDM-DesktopName to GNOME for GNOME session (LP: #1212408)
+
+ -- Tim Lunn <tim@feathertop.org>  Tue, 03 Sep 2013 12:23:33 +1000
+
+gnome-shell-extensions (3.8.3.1-1) experimental; urgency=low
+
+  [ Jeremy Bicha ]
+  * New upstream release
+    - default-min-max and static-workspaces extensions have been dropped.
+      Use Classic Mode or tweak org.gnome.shell.overrides in dconf-editor
+  * debian/control.in:
+    - Depend on gnome-session 3.8, required for the new Classic mode.
+    - Update homepage
+  * debian/patches/dont-require-nautilus-classic.patch:
+    - Don't require nautilus-classic since it forces desktop icons
+  * debian/patches/fix-applications-menu-resolution-change.patch:
+    - Backport commit to not break applications menu when screen resolution
+      changes
+  * debian/patches/fix-hibernate.patch:
+    - Backport patch to fix checking whether hibernate is allowed
+  * debian/patches/look-in-data-home-for-themes.patch:
+    - Backport commit to also look in XDG_DATA_HOME (usually ~/.local/share/)
+      for user themes
+  * debian/rules:
+    - Run autoreconf
+
+ -- Andreas Henriksson <andreas@fatal.se>  Fri, 16 Aug 2013 20:25:30 +0200
+
+gnome-shell-extensions (3.8.2-1) experimental; urgency=low
+
+  * Team upload
+
+  [ Victor Seva ]
+  * Recommends gnome-tweak-tool
+
+  [ Jean Schurger ]
+  * New upstream release 3.7.92 (LP: #1017979, #1059152).
+  * Enabled new extensions.
+  * Dropped 'dock' and 'gajim'.
+  * Use ./configure instead of autoreconf.
+  * Bumped Standards-Version to 3.9.4.
+  * Updated Vcs-Svn.
+  * debian/control.in
+    - Added runtime dependency to 'gvfs' (>= 1.16.0).
+      The 'Places' extension rely on a 'gvfs' linked to 'udisks2'.
+
+  [ Simon McVittie ]
+  * New upstream release 3.8.2.
+  * Install the "classic mode"
+  * Enable windowNavigator extension (this means we have everything except
+    example and xrandr, the same as in the Ubuntu gnome3-team's PPA)
+
+ -- Simon McVittie <smcv@debian.org>  Thu, 23 May 2013 09:07:23 +0100
+
+gnome-shell-extensions (3.4.0-2) unstable; urgency=low
+
+  * Upload to unstable.
+
+ -- Michael Biebl <biebl@debian.org>  Wed, 30 May 2012 13:22:54 +0200
+
+gnome-shell-extensions (3.4.0-1) experimental; urgency=low
+
+  * New upstream release.
+  * Remove 01_status-menu_disable_accounts.patch: The alternative-status-menu
+    extension no longer recreates the complete user menu but reuses the one
+    from gnome-shell, so we can't easily get rid of the "Online Accounts" menu
+    entry. We will patch gnome-shell directly instead.
+  * Remove 02-Revert-all-remove-all-GSettings-usage.patch and
+    03-Revert-Remove-all-references-to-localedir-from-metad.patch, no longer
+    required.
+  * Bump Standards-Version to 3.9.3
+
+ -- Michael Biebl <biebl@debian.org>  Mon, 21 May 2012 00:24:56 +0200
+
+gnome-shell-extensions (3.2.3-1) unstable; urgency=low
+
+  [ Josselin Mouette ]
+  * gnome-shell-extensions.gsettings-override: enable the alternative 
+    status menu by default. Closes: #648112.
+  * Use ${gnome:Version} to generate strict dependencies, it’s very 
+    unlikely that extensions remain compatible after a major upgrade.
+
+  [ Michael Biebl ]
+  * Upload to unstable.
+
+  [ Josselin Mouette ]
+  * 01_status-menu_disable_accounts.patch: new patch. Drop the unusable
+    advertisement for Google. It is already available in the control 
+    center anyway.
+
+  [ Michael Biebl ]
+  * New upstream release.
+  * Drop patches which have been merged upstream:
+    - debian/patches/upstream/*
+    - debian/patches/fix-*
+  * Refresh 01_status-menu_disable_accounts.patch.
+  * Add 02-Revert-all-remove-all-GSettings-usage.patch: Use GSettings since we
+    install the extensions system-wide.
+  * Use dh-autoreconf to generate the build system.
+  * Add 03-Revert-Remove-all-references-to-localedir-from-metad.patch: Use
+    locales from system-wide location.
+
+ -- Michael Biebl <biebl@debian.org>  Sat, 11 Feb 2012 23:28:53 +0100
+
+gnome-shell-extensions (3.2.0-1) experimental; urgency=low
+
+  [ Victor Seva ]
+  * Initial release (Closes: #627515)
+    Package based on the work by Bilal Akhtar <bilalakhtar@ubuntu.com>
+  * debian/copyright
+    - Added myself
+    - Fixed syntax-error-in-dep5-copyright syntax error
+  * debian/control.in
+    - Added myself as maintainer.
+    - Fix gnome-shell dependency.
+    - Fix gir1.2-gtop-2.0 dependency for systemMonitor ext.
+  * debian/rules
+    - Added uploaders.mk gnome-version.mk includes.
+    - Removed unused variables.
+  * debian/watch added.
+  * No more gnome-shell-extension-* packages.
+  * debian/patches/upstream
+    - patch_967aee7aad2accfb38d91ab56b6c5e91d86a2722.diff
+      popup menu fix
+    - patch_66242aa76a5d59fb4659551575c1fbb42e50b8fb.diff
+      dock fix.
+    - patch_4c5a36e4c0cbe38f2e26b6b3c8b02e88b4b939f7.diff
+      patch_2bba98d6214cffae2eb5cecb9d7c1f6b6d244052.diff
+      systemMonitor: Properly enable/disable
+  * debian/patches
+    - fix_dock_gnome-shell_version.diff
+    - fix_alternate-tab_661281.diff
+    - fix_alternate-tab_gnome-shell_version.diff
+  * debian/rules
+    - EXTENSIONS_ENABLED, EXTENSIONS_DISABLED variables
+    - disabled xrandr-indicator
+
+  [ Michael Biebl ]
+  * debian/watch: Track .xz tarballs.
+  * debian/control.in:
+    - Set pkg-gnome-maintainers@lists.alioth.debian.org as Maintainer and add
+      Victor Seva <linuxmaniac@torreviejawireless.org> to Uploaders.
+    - Wrap (Build-)Depends.
+    - Add Vcs-Svn and Vcs-Browser field.
+  * debian/rules:
+    - Include gnome-get-source.mk.
+
+ -- Michael Biebl <biebl@debian.org>  Sat, 12 Nov 2011 18:32:22 +0100
